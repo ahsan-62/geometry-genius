@@ -15,7 +15,7 @@
     <header></header>
     <main>
       <div class="flex flex-col lg:flex-row mt-10">
-        <div class="flex-1 grid grid-cols-3 gap-4">
+        <div class="flex-1 grid grid-cols-3">
           <!-- first card -->
           <div class="card w-96 bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
@@ -29,7 +29,7 @@
                   type="text"
                   class="border border-gray-300 w-24 px-3 rounded-lg"
                   name=""
-                  id=""
+                  id="triangle-base"
                   placeholder="base"
                 />
                 <span>cm</span>
@@ -37,14 +37,21 @@
                   type="text"
                   class="border border-gray-300 w-24 px-3 rounded-lg"
                   name=""
-                  id=""
+                  id="triangle-height"
                   placeholder="height"
                 />
                 <span>cm</span>
               </p>
 
+              <p>Area:<span id="triangle-area"> 0</span> cm<sup>2</sup></p>
+
               <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
+                <button
+                  onclick="calculateTriangleArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
@@ -54,13 +61,40 @@
               <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Rectangle</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h2 class="card-title">Triangle</h2>
+              <p>Area (A)=w * l</p>
+              <p>
+                <input
+                  type="text"
+                  class="border border-gray-300 w-24 px-3 rounded-lg"
+                  name=""
+                  id="rectangle-width"
+                  placeholder="width"
+                />
+                <span>cm</span>
+                <input
+                  type="text"
+                  class="border border-gray-300 w-24 px-3 rounded-lg"
+                  name=""
+                  id="rectangle-length"
+                  placeholder="length"
+                />
+                <span>cm</span>
+              </p>
+
+              <p>Area:<span id="rectangle-area"> 0</span> cm<sup>2</sup></p>
+
               <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
+                <button
+                  onclick="calculateRectangleArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
+
           <!-- Third card -->
           <div class="card w-96 bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
@@ -72,9 +106,35 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Parallelogram</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>Area (A)=b * h</p>
+              <p>
+                <input
+                  type="text"
+                  class="border border-gray-300 w-24 px-3 rounded-lg"
+                  name=""
+                  id="parallelogram-base"
+                  placeholder="base"
+                />
+                <span>cm</span>
+                <input
+                  type="text"
+                  class="border border-gray-300 w-24 px-3 rounded-lg"
+                  name=""
+                  id="parallelogram-height"
+                  placeholder="height"
+                />
+                <span>cm</span>
+              </p>
+
+              <p>Area:<span id="parallelogram-area"> 0</span> cm<sup>2</sup></p>
+
               <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
+                <button
+                  onclick="calculateArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
@@ -84,5 +144,6 @@
         </div>
       </div>
     </main>
+    <script src="scripts/area-calculate.js"></script>
   </body>
 </html>
